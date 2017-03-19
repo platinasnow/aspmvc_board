@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sqlMap namespace="board" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ibatis.apache.org/mapping">
+
+  <alias>
+    <typeAlias alias="BoardClass" type="sample_board.Models.board.Board"/>
+  </alias>
+
+  <resultMaps>
+    <resultMap id="boardMap" class="BoardClass">
+      <result property="idx" column="idx" />
+      <result property="title" column="title" />
+      <result property="contents" column="contents" />
+      <result property="regDate" column="reg_date" />
+      <result property="regId" column="reg_id" />
+      <result property="updateDate" column="upt_date" />
+      <result property="updateId" column="upt_id" />
+    </resultMap>
+  </resultMaps>
+
+  <statements>
+
+    <select id="findAll" resultMap="boardMap">
+      SELECT * FROM test_table
+    </select>
+  </statements>
+
+</sqlMap>
