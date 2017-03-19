@@ -39,15 +39,21 @@
                     {
                         <tr>
                             <td class="co1"></td>
-                            <td class="co2"><a href="modify.do?idx=@item.idx">@item.title</a></td>
+                            <td class="co2"><a href="view?idx=@item.idx">@item.title</a></td>
                             <td class="co4">@item.regId</td>
                             <td class="co6">@item.regDate</td>
+                        </tr>
+                    }
+                    @if (ViewBag.list.Count == 0)
+                    {
+                        <tr>
+                            <td colspan="4">게시글이 없습니다.</td>
                         </tr>
                     }
                 </tbody>
             </table>
             <!-- pagination -->
-            <a href="register.do" class="enrollment_btn">등록</a>
+            <a href="register" class="enrollment_btn">등록</a>
         </div>
     </form>
 </div>

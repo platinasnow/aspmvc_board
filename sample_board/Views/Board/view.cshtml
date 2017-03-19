@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "view";
+}
+<div class="sub_content">
+    <h2>상세보기</h2>
+    <div class="manager_detail">
+        <form method="post">
+            <table>
+                <caption>테이블</caption>
+                <colgroup>
+                    <col width="20%">
+                    <col width="80%">
+                </colgroup>
+                <tr>
+                    <th scope="row"><label for="">제목</label></th>
+                    <td>@ViewBag.item.title</td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="">내용</label></th>
+                    <td style="white-space: pre-line">@ViewBag.item.contents</td>
+                </tr>
+                
+            </table>
+            <input type="hidden" name="idx" value="@ViewBag.item.idx" />
+        </form>
+    </div>
+    <div class="btn_area right">
+        <a href="javascript:void(0);" class="btn" onclick="deleteItem();">삭제</a>
+        <a href="javascript:void(0);" class="btn" onclick="modify();">수정</a>
+        <a href="list" class="btn">목록</a>
+    </div>
+</div>

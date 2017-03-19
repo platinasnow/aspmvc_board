@@ -191,6 +191,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\common\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -208,7 +209,13 @@
     <Content Include="resources\fonts\NanumBarunGothicLight.woff" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Board\Index.cshtml" />
+    <Content Include="Views\Board\register.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Board\list.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Board\view.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

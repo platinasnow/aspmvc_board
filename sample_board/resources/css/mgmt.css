@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* font */
 @font-face{
 	font-family: NanumWeb;
@@ -100,21 +100,6 @@ hr {display:none;}
 .board table .title_tr .line{background:url(/resources/images/mgmt/table_bg.png) 0 no-repeat; }
 .board table td.left{padding-left:10px;text-align: left;}
 
-/* 코드 관리 */
-.code{overflow: hidden;}
-.code-list{overflow: hidden;min-height: 320px;max-height: 320px;overflow: auto;}
-.code-list ul{float: left;width:350px;height:300px;border:1px solid #ccc;margin-right:20px;overflow: auto; }
-.code-list ul li{padding:20px;}
-.code-list ul li.on{background:#3f79b8;color: #fff;}
-.code-list tr.on{background:#3f79b8;color: #fff;}
-.code input[type=text]{width:100px;height:30px; padding-left:5px;}
-.code input[type=text].long{width:200px;}
-.code select {height: 32px;padding: 4px;vertical-align: middle;}
-.code table tr td .location{width:150px;}
-.code table tr td .address{width:250px;}
-.code table tr td.left{text-align: left;}
-
-
 .btn_area{overflow:hidden; padding-top:15px;}
 .btn_area.right{text-align: right;}
 .btn_area.upper{margin:-10px 0 5px 0;}
@@ -124,7 +109,7 @@ hr {display:none;}
 .list_btn_area{overflow:hidden; padding-top:15px;}
 .list_btn_area .btn{display:inline-block; width:75px; padding:6px 0; text-align:center; background:#3f79b8; font-size:13px; color:#fff;}
 .list_btn_area .btn.small{width:55px;}
-.enrollment_btn{position:absolute; right:0; bottom:0; display:block; width:100px; padding:7px 0; text-align:center; background:#3f79b8; font-size:13px; color:#fff;}
+.enrollment_btn{float:right;display:block; width:100px; padding:7px 0; text-align:center; background:#3f79b8; font-size:13px; color:#fff;}
 .enrollment_btn.left{left:0;}
 
 .file_text{width:200px;}
@@ -194,23 +179,10 @@ hr {display:none;}
 .manager_detail .utility-table-wrap tr td div img{width:168px;height:105px;}
 .manager_detail .utility-table-wrap tr td button{width:15px; height:15px; margin-left:15px; text-align:center; background:#3f79b8; font-size:13px; color:#fff; vertical-align:middle;}
 .manager_detail .file-wrapper{padding:5px 0;}
+
 /* 사용자 등록 테이블 */
 .manager_detail .admin th{border-left:1px solid #b2b2b2; border-right:1px solid #b2b2b2;}
 .manager_detail .admin tr.title_tr th, .manager_detail .admin tr.title_tr td{padding-left: 0px; text-align: center;}
 .manager_detail .admin tr.input_tr td input[type=text]{width:130px; align:center;}
 .manager_detail .admin tr.input_tr td{border-left:1px solid #b2b2b2; border-right:1px solid #b2b2b2;}
 .manager_detail .admin tr.radio_tr{border:1px solid #b2b2b2; padding: 10px;}
-
-.order_list_wrap{overflow: hidden;}
-.order_list_wrap ul li{padding:10px 20px;}
-.order_list_wrap ul li.on{background:#c4c4c4;} 
-.order_list_left{float:left;overflow-y: scroll;height: 350px;width:280px;border: 1px solid #b2b2b2;}
-.order_list_right{float:left;margin: 20px 20px;}
-
-.search_layer{display:none; position:absolute; left:50%; top:20%; z-index:100; width:600px; max-height:500px;overflow:auto; padding:20px; margin:0 0 0 -250px; background:#fff; border:1px solid #ddd;}
-.search_layer.on{display:block;}
-.search_layer_back{display:none; position:absolute; left:0; top:0; z-index:90; width:100%; height:100%; background:#fff; opacity:.7;}
-.search_layer_back.on{display:block;}
-
-.package_list_wrap{height: 265px;overflow-y: scroll;}
-.package_list_wrap ul li{float: left;padding:10px 10px;}

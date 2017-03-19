@@ -13,8 +13,6 @@
       <result property="contents" column="contents" />
       <result property="regDate" column="reg_date" />
       <result property="regId" column="reg_id" />
-      <result property="updateDate" column="upt_date" />
-      <result property="updateId" column="upt_id" />
     </resultMap>
   </resultMaps>
 
@@ -23,6 +21,30 @@
     <select id="findAll" resultMap="boardMap">
       SELECT * FROM test_table
     </select>
+
+    <insert id="insertBoard">
+      INSERT INTO test_table (
+             title
+            ,contents
+            ,reg_id
+      )
+      VALUES (
+             #title#
+            ,#contents#
+            ,#regId#
+      )
+    </insert>
+
+    <select id="findBoard" resultMap="boardMap">
+      SELECT idx
+            ,title
+            ,contents
+            ,reg_date
+            ,reg_id
+      FROM test_table
+      WHERE idx = #idx#
+    </select>
+    
   </statements>
 
 </sqlMap>

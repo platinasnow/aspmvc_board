@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "register";
+}
+
+<div class="sub_content">
+    <h2>테스트 등록</h2>
+    <div class="manager_detail">
+        <form method="post" enctype="multipart/form-data">
+            <table>
+                <caption>테스트 입력 테이블</caption>
+                <colgroup>
+                    <col width="20%">
+                    <col width="30%">
+                    <col width="20%">
+                    <col width="30%">
+                </colgroup>
+                <tr>
+                    <th scope="row"><label for="title">* 제목</label></th>
+                    <td colspan="3"><input type="text" name="title" id="title" maxlength="50" value="" /></td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="pw">* 내용</label></th>
+                    <td colspan="3"><textarea rows="20" cols="30" id="contents" name="contents"></textarea> </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="name">* 파일</label></th>
+                    <td colspan="3">
+                        <!--
+                        <c:forEach items="${filesList1 }" var="list">
+                            <div class="file-wrapper">
+                                <input type="text" class="file_text" value="${list.originalFileName }" readonly="readonly" />
+                                <span class="btn_area file_area">
+                                    <button type="button" class="btn file_btn">파일 선택</button>
+                                    <input type="file" name="file" class="file_input" />
+                                </span>
+                                <input type="hidden" name="fileIdxs" value="${list.fileIdx }" />
+                                <c:if test="${!empty list.fileIdx }"><span class="btn_area file_area optional_btn_area"><a href="javascript:void(0);" class="del_btn btn" data-idx="${list.fileIdx }" onclick="deleteFile(this);">삭제</a></span></c:if>
+                                (320x287 / 파일형식 : jpg, gif)
+                            </div>
+                        </c:forEach>
+                            -->
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="btn_area">
+        <a href="javascript:void(0);" class="btn" onclick="register();">확인</a>
+        <a href="list" class="btn">목록</a>
+    </div>
+</div>
+<script>
+    function register() {
+        $('form').attr('action', 'registerProc').submit();
+    };
+    
+</script>

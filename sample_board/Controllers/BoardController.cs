@@ -10,11 +10,33 @@ namespace sample_board.Controllers
 {
     public class BoardController : Controller
     {
+        BoardDao boardDao = new BoardDao();
+
         // GET: Board
-        public ActionResult Index(Board board)
+        public ActionResult list(Board board)
         {
-            BoardDao dao = new BoardDao();
-            ViewBag.list = dao.findAll(board);
+            ViewBag.list = boardDao.findAll(board);
+            return View();
+        }
+
+
+        public ActionResult register()
+        {
+            return View();
+        }
+
+        public RedirectToRouteResult registerProc(Board board)
+        {
+            board.regId = "testasp";
+            boardDao.insertBoard(board);
+
+            return RedirectToAction("list");
+        }
+
+        public ActionResult view(Board board)
+        {
+            Board item = boardDao.findBoard(board);
+            ViewBag.item = item;
             return View();
         }
     }
