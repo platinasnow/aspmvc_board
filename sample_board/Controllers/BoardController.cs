@@ -15,7 +15,11 @@ namespace sample_board.Controllers
         // GET: Board
         public ActionResult list(Board board)
         {
+            board.itemPerPage = 10;
+            board.totalItemCount = boardDao.findAllCount(board);
+
             ViewBag.list = boardDao.findAll(board);
+            ViewBag.pagination = board;
             return View();
         }
 

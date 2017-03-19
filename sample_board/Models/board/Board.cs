@@ -1,11 +1,12 @@
-﻿using System;
+﻿using sample_board.Models.common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
 namespace sample_board.Models.board
 {
-    public class Board
+    public class Board : SearchInfo
     {
         public int idx { get; set; }
         public int masterIdx { get; set; }

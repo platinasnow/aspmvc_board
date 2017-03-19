@@ -35,13 +35,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in ViewBag.list)
+                    @for(var idx = 0; idx < ViewBag.list.Count; idx++ )
                     {
                         <tr>
-                            <td class="co1"></td>
-                            <td class="co2"><a href="view?idx=@item.idx">@item.title</a></td>
-                            <td class="co4">@item.regId</td>
-                            <td class="co6">@item.regDate</td>
+                            <td class="co1"> @(ViewBag.pagination.totalItemCount - (ViewBag.pagination.currentPage -1) * ViewBag.pagination.itemPerPage - idx)</td>
+                            <td class="co2"><a href="view?idx=@ViewBag.list[idx].idx">@ViewBag.list[idx].title</a></td>
+                            <td class="co4">@ViewBag.list[idx].regId</td>
+                            <td class="co6">@ViewBag.list[idx].regDate</td>
                         </tr>
                     }
                     @if (ViewBag.list.Count == 0)
@@ -53,7 +53,34 @@
                 </tbody>
             </table>
             <!-- pagination -->
+            <input type="hidden" name="search" value="true" />
+            <input type="hidden" id="page" name="page" value="@ViewBag.pagination.currentPage" />
+            <div class="paging_comm">
+                <a href="#" class="btn_prev" onclick="goPage('1')"><img src="/resources/images/mgmt/list_rew.gif" alt="맨처음으로 돌아가기" /></a>
+                <a href="#" class="btn_prev" onclick="goPage('@ViewBag.pagination.jumpPrevPage')"><img src="/resources/images/mgmt/list_prev.gif" alt="이전" /></a>
+                @for (var idx = ViewBag.pagination.pageBegin; idx <= ViewBag.pagination.pageEnd; idx++)
+                {
+                    if (ViewBag.pagination.currentPage == idx)
+                    {
+                        <span class="hidden">현재페이지</span><em class="paging_number_1">@idx</em>
+                    }
+                    else
+                    {
+                        <a href="#" class="link_page" onclick="goPage('@idx')">@idx</a>
+                    }
+
+                }
+                <a href="#" class="btn_next" onclick="goPage('@ViewBag.pagination.jumpNextPage')"><img src="/resources/images/mgmt/list_next.gif" alt="다음" /></a>
+                <a href="#" class="btn_prev" onclick="goPage('@ViewBag.pagination.lastPage')"><img src="/resources/images/mgmt/list_ff.gif" alt="끝으로" /></a>
+            </div>
+
             <a href="register" class="enrollment_btn">등록</a>
         </div>
     </form>
 </div>
+<script type="text/javascript">
+    function goPage(page) {
+        $("#page").val(page);
+        $("form").submit();
+    };
+</script>

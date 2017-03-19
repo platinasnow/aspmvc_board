@@ -23,5 +23,10 @@ namespace sample_board.Dao.face.board
         {
             return Mapper.Instance().QueryForObject<Board>("findBoard", board);
         }
+
+        public int findAllCount(Board board)
+        {
+            return Mapper.Instance().QueryForObject<int>("findAllCount", board);
+        }
     }
 }

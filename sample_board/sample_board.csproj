@@ -154,6 +154,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\board\Board.cs" />
+    <Compile Include="Models\common\Pagination.cs" />
+    <Compile Include="Models\common\SearchInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -191,7 +193,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\common\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
