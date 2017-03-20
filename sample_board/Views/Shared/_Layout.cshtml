@@ -8,12 +8,14 @@
     <link rel="stylesheet" type="text/css" href="/resources/css/mgmt.css">
     <script src="/resources/js/jquery-1.12.4.min.js"></script>
     <script src="/resources/js/jquery-ui.min.js"></script>
+    <script src="/resources/js/jquery.cust.js"></script>
 </head>
 <body>
     <div id="wrap">
         <div id="content">
-            @RenderBody()
-        </div>
+            <div class="content_wrap">
+                @RenderBody()
+            </div>
         <div id="footer"></div>
     </div>
 </body>

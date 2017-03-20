@@ -134,7 +134,7 @@ hr {display:none;}
 .manager_detail table td.pl_0{padding-left:0;}
 .manager_detail table td.br_1{border-right:1px solid #b2b2b2;}
 .manager_detail table td.tit{padding:10px;}
-.manager_detail table td.tit input[type=text]{width:510px; height:30px; padding-left:5px;}
+.manager_detail table td.tit input[type=text]{width:710px; height:30px; padding-left:5px;}
 .manager_detail table td.tit button{height:34px; padding:5px; background:#3f79b8; font-size:13px; text-align:center; color:#fff;}
 .manager_detail table td input{height: 16px;padding: 4px;vertical-align: middle;}
 .manager_detail table td input[type=text],.manager_detail table td input[type=password]{width:130px;}
@@ -145,7 +145,7 @@ hr {display:none;}
 .manager_detail table td .master_option input[type=checkbox]{margin-right:3px;}
 .manager_detail table td.type > div{padding:5px 0;}
 .manager_detail table td.textarea{padding:10px;}
-.manager_detail table td.textarea textarea{width:605px; height:100px; padding:5px; resize:none;}
+.manager_detail table td.textarea textarea{width:705px; height:100px; padding:5px; resize:none;}
 .manager_detail table td .app-wrap{overflow: hidden; border-top:1px solid #b2b2b2; color: #666;}
 .manager_detail table td .app-wrap:first-child{border-top:0;}
 .manager_detail table td .app-wrap > div{float:left; width:155px; padding:15px 0 15px 5px;}
@@ -154,8 +154,8 @@ hr {display:none;}
 .manager_detail table td .txt_box{padding:20px 0 0 10px;}
 .manager_detail table td .txt_box span:first-child{margin-right:15px;}
 .manager_detail table td input[type=file]{vertical-align:middle;}
-.manager_detail table td textarea{width:507px;}
-.manager_detail table tr td .title{width:500px;}
+.manager_detail table td textarea{width:707px;}
+.manager_detail table tr td .title{width:700px;}
 .manager_detail table .grit{width:40px;}
 .manager_detail table .visible{width:18px;}
 .manager_detail table label{margin: 0 6px 0 2px;}

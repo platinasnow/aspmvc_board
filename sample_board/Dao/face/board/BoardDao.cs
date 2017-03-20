@@ -28,5 +28,16 @@ namespace sample_board.Dao.face.board
         {
             return Mapper.Instance().QueryForObject<int>("findAllCount", board);
         }
+
+        public void updateBoard(Board board)
+        {
+            Mapper.Instance().Update("updateBoard", board);
+        }
+
+        public void deleteBoard(Board board)
+        {
+            Mapper.Instance().Delete("deleteBoard", board);
+        }
+
     }
 }

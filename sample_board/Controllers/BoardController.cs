@@ -43,5 +43,24 @@ namespace sample_board.Controllers
             ViewBag.item = item;
             return View();
         }
+
+        public ActionResult modify(Board board)
+        {
+            Board item = boardDao.findBoard(board);
+            ViewBag.item = item;
+            return View();
+        }
+
+        public RedirectToRouteResult modifyProc(Board board)
+        {
+            boardDao.updateBoard(board);
+            return RedirectToAction("list");
+        }
+
+        public RedirectToRouteResult delete(Board board)
+        {
+            boardDao.deleteBoard(board);
+            return RedirectToAction("list");
+        }
     }
 }
