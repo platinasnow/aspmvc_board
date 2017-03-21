@@ -176,6 +176,7 @@
     <Content Include="resources\js\jquery.blockUI.js" />
     <Content Include="resources\js\jquery.cust.js" />
     <Content Include="Dao\impl\board\Board.xml" />
+    <Content Include="resources\js\common.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

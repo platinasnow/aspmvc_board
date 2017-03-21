@@ -30,6 +30,14 @@
             ,reg_id
           FROM test_table
           WHERE 1=1
+          <isNotEmpty property="searchInput">
+            <isEqual property="searchOption" compareValue="title">
+              AND title LIKE '%'+#searchInput#+'%'
+            </isEqual>
+            <isEqual property="searchOption" compareValue="contents">
+              AND contents LIKE '%'+#searchInput#+'%'
+            </isEqual>
+        </isNotEmpty>
       
        )t
       WHERE 1=1
@@ -40,7 +48,14 @@
       SELECT COUNT(*)
       FROM test_table
       WHERE 1=1
-      
+        <isNotEmpty property="searchInput">
+          <isEqual property="searchOption" compareValue="title">
+            AND title LIKE '%'+#searchInput#+'%'
+          </isEqual>
+          <isEqual property="searchOption" compareValue="contents">
+            AND contents LIKE '%'+#searchInput#+'%'
+          </isEqual>
+        </isNotEmpty>
     </select>
 
     <insert id="insertBoard">
